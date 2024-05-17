@@ -1,8 +1,8 @@
-# My comand
+# My team
 
 It is a test task to create static pixel perfect layout.
 
-To see it [My comand]()
+Link to see it [My team](https://my-team-layout-test.vercel.app/)
 
 ## Used
 
