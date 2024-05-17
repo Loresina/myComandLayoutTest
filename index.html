@@ -8,18 +8,111 @@
     <link rel="stylesheet" href="/src/styles/normalize.min.css" />
     <link rel="stylesheet" href="/src/styles/styles.css" />
   </head>
+
   <body>
     <main>
       <h2>Моя команда</h2>
-      <div class="main">
+      <div class="main-sections">
         <section class="section training">
-          <h4>Обученность команды</h4>
+          <div class="section-title">
+            <h4>Обученность команды</h4>
+            <span class="tooltip-info">
+              <span class="tooltip-text">Дополнительная информация.</span>
+            </span>
+          </div>
+
+          <div class="training-chart">
+            <div class="chart">
+              <div class="chart-center"></div>
+              <span class="h1">70%</span>
+            </div>
+
+            <div class="chart-legend">
+              <span class="chart-legend__title">Курсы и траектории</span>
+
+              <div class="chart-legend__item">
+                <div class="chart-legend__status">
+                  <div class="chart-legend__dot green"></div>
+                  <span class="chart-legend__text">Завершено</span>
+                </div>
+
+                <div class="chart-legend__statistic">
+                  <span>70%</span>
+                  <span>(7)</span>
+                </div>
+              </div>
+
+              <div class="chart-legend__item">
+                <div class="chart-legend__status">
+                  <div class="chart-legend__dot orange"></div>
+                  <span class="chart-legend__text">В процессе</span>
+                </div>
+
+                <div class="chart-legend__statistic">
+                  <span>10%</span>
+                  <span>(1)</span>
+                </div>
+              </div>
+
+              <div class="chart-legend__item">
+                <div class="chart-legend__status">
+                  <div class="chart-legend__dot red"></div>
+                  <span class="chart-legend__text">Не пройдено</span>
+                </div>
+
+                <div class="chart-legend__statistic">
+                  <span>10%</span>
+                  <span>(1)</span>
+                </div>
+              </div>
+
+              <div class="chart-legend__item">
+                <div class="chart-legend__status">
+                  <div class="chart-legend__dot blue"></div>
+                  <span class="chart-legend__text">Не начато</span>
+                </div>
+
+                <div class="chart-legend__statistic">
+                  <span>10%</span>
+                  <span>(1)</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="section progress">
-          <h4>Прогресс сотрудников</h4>
+          <div class="section-title">
+            <h4>Прогресс сотрудников</h4>
+            <span class="tooltip-info">
+              <span class="tooltip-text">Дополнительная информация.</span>
+            </span>
+          </div>
+
+          <div class="progress-chart">
+            <div class="progress-chart-center"></div>
+            <span class="h1">2/5</span>
+          </div>
+
+          <span class="progress-legend">сотрудников завершили обучение</span>
         </section>
+
         <section class="section attention">
           <h4>Oбратите внимание</h4>
+          <ul class="attention-info">
+            <li class="attention-info__li">
+              <img src="/src/img/attention.svg" />
+              <span>Не прошли обучение: 1</span>
+            </li>
+            <li class="attention-info__li">
+              <img src="/src/img/attention.svg" />
+              <span>Не заходили на портал: 1</span>
+            </li>
+            <li class="attention-info__li">
+              <img src="/src/img/attention.svg" />
+              <span>Не были более 2 недель: 1</span>
+            </li>
+          </ul>
         </section>
       </div>
     </main>

@@ -6,7 +6,7 @@
 @font-face {
   font-weight: 400;
   font-family: "Stolzl";
-  src: url("/src/fonts/Stolzl/stolzl_regular.otf");
+  src: url("/src/fonts/Stolzl/stolzl_book.otf");
 }
 @font-face {
   font-weight: 400;
@@ -25,11 +25,21 @@ body {
   background: #f3f8fc;
 }
 
+.h1 {
+  font-family: "Stolzl";
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+}
+
 h2 {
   font-family: "Stolzl";
   font-size: 24px;
   font-weight: 500;
   line-height: 32px;
+  padding: 0;
+  margin: 0;
+  margin-left: 40px;
 }
 
 h4 {
@@ -37,22 +47,238 @@ h4 {
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
 }
 
 main {
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
-.main {
+.main-sections {
   display: flex;
   gap: 20px;
+  max-width: 1090px;
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   background: #ffffff;
   padding: 40px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px -2px rgba(24, 39, 75, 0.04), 0px 2px 4px -2px rgba(24, 39, 75, 0.06);
+}
+
+.section-title {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+
+.tooltip-info {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+}
+.tooltip-info::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("/src/img/info.svg");
+  background-size: cover;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  top: 25px;
+  left: -80px;
+  width: 200px;
+  background-color: #f3f8fc;
+  padding: 5px;
+  border-radius: 4px;
+  z-index: 1;
+  box-shadow: 0px 4px 4px -2px rgba(24, 39, 75, 0.04), 0px 2px 4px -2px rgba(24, 39, 75, 0.06);
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.tooltip-info:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.training-chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chart {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: conic-gradient(#00a75c 0% 70%, #e9841d 70% 80%, #ec133d 80% 90%, #b6d4ed 90% 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-center {
+  position: absolute;
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.h1 {
+  z-index: 2;
+}
+
+.chart-legend__title {
+  font-family: "Stolzl", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.chart-legend {
+  width: 183px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-legend__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.chart-legend__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-legend__statistic {
+  display: flex;
+  gap: 4px;
+}
+.chart-legend__statistic span:last-child {
+  opacity: 50%;
+}
+
+.chart-legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-chart {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(from -90deg at 50% 50%, #e9841d 0% 15%, #e7f1f9 15% 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 51%, 0 50%);
+}
+.progress-chart .h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+.progress-chart-center {
+  position: absolute;
+  text-align: center;
+  width: 160px;
+  height: 160px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.progress-legend {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  width: 220px;
+}
+
+.attention-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.attention-info__li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid #e7f1f9;
+}
+.attention-info__li img {
+  width: 16px;
+}
+
+@media (max-width: 1140px) {
+  .main-sections {
+    flex-direction: column;
+  }
+}
+@media (max-width: 470px) {
+  .training-chart {
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

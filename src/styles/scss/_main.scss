@@ -1,16 +1,228 @@
 main {
   position: relative;
-  //   margin: auto;
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 
-.main {
+.main-sections {
   display: flex;
   gap: 20px;
+  max-width: 1090px;
 }
 
 .section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
   background: $white;
   padding: 40px;
+  border-radius: 40px;
+  box-sizing: border-box;
+  @include shadow;
+}
+
+.section-title {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  align-items: center;
+}
+
+.tooltip-info {
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("/src/img/info.svg");
+    background-size: cover;
+  }
+}
+
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  top: 25px;
+  left: -80px;
+
+  width: 200px;
+  background-color: $background;
+  padding: 5px;
+  border-radius: 4px;
+
+  z-index: 1;
+  @include shadow;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.tooltip-info:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+.training-chart {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.chart {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  background: conic-gradient(
+    $green 0% 70%,
+    $orange 70% 80%,
+    $red 80% 90%,
+    $blue 90% 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chart-center {
+  position: absolute;
+  text-align: center;
+  width: 130px;
+  height: 130px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.h1 {
+  z-index: 2;
+}
+
+.chart-legend__title {
+  font-family: "Stolzl", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 4px;
+}
+
+.chart-legend {
+  width: 183px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chart-legend__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include section-text;
+}
+
+.chart-legend__status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.chart-legend__statistic {
+  display: flex;
+  gap: 4px;
+
+  & span:last-child {
+    opacity: 50%;
+  }
+}
+
+.chart-legend__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: red;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.progress-chart {
+  position: absolute;
+  bottom: 0;
+  width: 200px;
+  height: 200px;
+  background: conic-gradient(
+    from -90deg at 50% 50%,
+    $orange 0% 15%,
+    $light-grey 15% 100%
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: polygon(0 0, 100% 0, 100% 51%, 0 50%);
+
+  & .h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+  }
+}
+
+.progress-chart-center {
+  position: absolute;
+  text-align: center;
+  width: 160px;
+  height: 160px;
+  background-color: $white;
+  border-radius: 50%;
+}
+
+.progress-legend {
+  @include section-text;
+  width: 220px;
+}
+
+.attention-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 12px;
+}
+
+.attention-info__li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: 1px solid $light-grey;
+
+  & img {
+    width: 16px;
+  }
+}
+
+@media (max-width: 1140px) {
+  .main-sections {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 470px) {
+  .training-chart {
+    flex-direction: column;
+  }
 }
