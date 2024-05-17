@@ -1,0 +1,16 @@
+main {
+  position: relative;
+  //   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.section {
+  background: $white;
+  padding: 40px;
+}

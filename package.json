@@ -1,0 +1,19 @@
+{
+  "name": "mycomandlayouttest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:scss": "stylelint '**/*.scss'",
+    "lint:html": "htmlhint '**/*.html'",
+    "css": "sass --watch ./src/styles/scss/index.scss:./src/styles/styles.css"
+  },
+  "author": "Ekaterina Volynshchokova",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "sass": "^1.77.2",
+    "stylelint-config-standard-scss": "^13.1.0"
+  }
+}
