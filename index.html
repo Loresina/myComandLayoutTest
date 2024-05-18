@@ -16,67 +16,71 @@
         <section class="section training">
           <div class="section-title">
             <h4>Обученность команды</h4>
-            <span class="tooltip-info">
-              <span class="tooltip-text">Дополнительная информация.</span>
+            <span class="section-title__tooltip-info">
+              <span class="section-title__tooltip-text"
+                >Дополнительная информация</span
+              >
             </span>
           </div>
 
-          <div class="training-chart">
-            <div class="chart">
-              <div class="chart-center"></div>
-              <span class="h1">70%</span>
+          <div class="tr-chart-container">
+            <div class="tr-chart">
+              <div class="tr-chart__center"></div>
+              <h1>70%</h1>
             </div>
 
-            <div class="chart-legend">
-              <span class="chart-legend__title">Курсы и траектории</span>
+            <div class="tr-chart-legend">
+              <span class="tr-chart-legend__title">Курсы и траектории</span>
 
-              <div class="chart-legend__item">
-                <div class="chart-legend__status">
-                  <div class="chart-legend__dot green"></div>
-                  <span class="chart-legend__text">Завершено</span>
-                </div>
+              <ul class="tr-chart-legend__list">
+                <li class="tr-chart-legend__item">
+                  <div class="tr-chart-legend__status">
+                    <div class="tr-chart-legend__dot green"></div>
+                    <span class="tr-chart-legend__text">Завершено</span>
+                  </div>
 
-                <div class="chart-legend__statistic">
-                  <span>70%</span>
-                  <span>(7)</span>
-                </div>
-              </div>
+                  <div class="tr-chart-legend__statistic">
+                    <span>70%</span>
+                    <span>(7)</span>
+                  </div>
+                </li>
 
-              <div class="chart-legend__item">
-                <div class="chart-legend__status">
-                  <div class="chart-legend__dot orange"></div>
-                  <span class="chart-legend__text">В процессе</span>
-                </div>
+                <li class="tr-chart-legend__item">
+                  <div class="tr-chart-legend__status">
+                    <div class="tr-chart-legend__dot orange"></div>
+                    <span class="tr-chart-legend__text">В процессе</span>
+                  </div>
 
-                <div class="chart-legend__statistic">
-                  <span>10%</span>
-                  <span>(1)</span>
-                </div>
-              </div>
+                  <div class="tr-chart-legend__statistic">
+                    <span>10%</span>
+                    <span>(1)</span>
+                  </div>
+                </li>
 
-              <div class="chart-legend__item">
-                <div class="chart-legend__status">
-                  <div class="chart-legend__dot red"></div>
-                  <span class="chart-legend__text">Не пройдено</span>
-                </div>
+                <li class="tr-chart-legend__item">
+                  <div class="tr-chart-legend__status">
+                    <div class="tr-chart-legend__dot red"></div>
+                    <span class="tr-chart-legend__text">Не пройдено</span>
+                  </div>
 
-                <div class="chart-legend__statistic">
-                  <span>10%</span>
-                  <span>(1)</span>
-                </div>
-              </div>
+                  <div class="tr-chart-legend__statistic">
+                    <span>10%</span>
+                    <span>(1)</span>
+                  </div>
+                </li>
 
-              <div class="chart-legend__item">
-                <div class="chart-legend__status">
-                  <div class="chart-legend__dot blue"></div>
-                  <span class="chart-legend__text">Не начато</span>
-                </div>
+                <li class="tr-chart-legend__item">
+                  <div class="tr-chart-legend__status">
+                    <div class="tr-chart-legend__dot blue"></div>
+                    <span class="tr-chart-legend__text">Не начато</span>
+                  </div>
 
-                <div class="chart-legend__statistic">
-                  <span>10%</span>
-                  <span>(1)</span>
-                </div>
-              </div>
+                  <div class="tr-chart-legend__statistic">
+                    <span>10%</span>
+                    <span>(1)</span>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -84,21 +88,26 @@
         <section class="section progress">
           <div class="section-title">
             <h4>Прогресс сотрудников</h4>
-            <span class="tooltip-info">
-              <span class="tooltip-text">Дополнительная информация.</span>
+            <span class="section-title__tooltip-info">
+              <span class="section-title__tooltip-text"
+                >Дополнительная информация</span
+              >
             </span>
           </div>
 
-          <div class="progress-chart">
-            <div class="progress-chart-center"></div>
-            <span class="h1">2/5</span>
+          <div class="pr-chart">
+            <div class="pr-chart__center"></div>
+            <h1>2/5</h1>
           </div>
 
-          <span class="progress-legend">сотрудников завершили обучение</span>
+          <span class="pr-chart-legend">сотрудников завершили обучение</span>
         </section>
 
         <section class="section attention">
-          <h4>Oбратите внимание</h4>
+          <div class="section-title">
+            <h4>Oбратите внимание</h4>
+          </div>
+
           <ul class="attention-info">
             <li class="attention-info__li">
               <img src="/src/img/attention.svg" />

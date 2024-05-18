@@ -1,0 +1,27 @@
+@media (max-width: 1140px) {
+  body {
+    height: auto;
+  }
+
+  .section-title {
+    justify-content: center;
+  }
+
+  .progress {
+    gap: 150px;
+  }
+
+  .section-title__tooltip-text {
+    right: 0;
+  }
+
+  .main-sections {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 470px) {
+  .training-chart {
+    flex-direction: column;
+  }
+}

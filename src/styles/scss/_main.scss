@@ -3,6 +3,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 24px;
+  padding: 15px;
 }
 
 .main-sections {
@@ -30,7 +31,7 @@ main {
   align-items: center;
 }
 
-.tooltip-info {
+.section-title__tooltip-info {
   position: relative;
   display: block;
   width: 16px;
@@ -46,11 +47,11 @@ main {
   }
 }
 
-.tooltip-text {
+.section-title__tooltip-text {
   visibility: hidden;
   position: absolute;
   top: 25px;
-  left: -80px;
+  right: -80px;
 
   width: 200px;
   background-color: $background;
@@ -63,18 +64,18 @@ main {
   opacity: 0;
 }
 
-.tooltip-info:hover .tooltip-text {
+.section-title__tooltip-info:hover .section-title__tooltip-text {
   visibility: visible;
   opacity: 1;
 }
 
-.training-chart {
+.tr-chart-container {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.chart {
+.tr-chart {
   position: relative;
   width: 160px;
   height: 160px;
@@ -88,9 +89,13 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  & h1 {
+    z-index: 1;
+  }
 }
 
-.chart-center {
+.tr-chart__center {
   position: absolute;
   text-align: center;
   width: 130px;
@@ -99,26 +104,27 @@ main {
   border-radius: 50%;
 }
 
-.h1 {
-  z-index: 2;
+.tr-chart-legend {
+  width: 183px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-.chart-legend__title {
+.tr-chart-legend__title {
   font-family: "Stolzl", sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
-  margin-bottom: 4px;
 }
 
-.chart-legend {
-  width: 183px;
+.tr-chart-legend__list {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.chart-legend__item {
+.tr-chart-legend__item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -126,13 +132,13 @@ main {
   @include section-text;
 }
 
-.chart-legend__status {
+.tr-chart-legend__status {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-.chart-legend__statistic {
+.tr-chart-legend__statistic {
   display: flex;
   gap: 4px;
 
@@ -141,23 +147,22 @@ main {
   }
 }
 
-.chart-legend__dot {
+.tr-chart-legend__dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: red;
 }
 
 .progress {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 150px;
+  //   gap: 150px;
   justify-content: space-between;
   align-items: center;
 }
 
-.progress-chart {
+.pr-chart {
   position: absolute;
   bottom: 0;
   width: 200px;
@@ -173,7 +178,7 @@ main {
   justify-content: center;
   clip-path: polygon(0 0, 100% 0, 100% 51%, 0 50%);
 
-  & .h1 {
+  & h1 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -181,7 +186,7 @@ main {
   }
 }
 
-.progress-chart-center {
+.pr-chart__center {
   position: absolute;
   text-align: center;
   width: 160px;
@@ -190,7 +195,7 @@ main {
   border-radius: 50%;
 }
 
-.progress-legend {
+.pr-chart-legend {
   @include section-text;
   width: 220px;
 }
@@ -212,17 +217,5 @@ main {
 
   & img {
     width: 16px;
-  }
-}
-
-@media (max-width: 1140px) {
-  .main-sections {
-    flex-direction: column;
-  }
-}
-
-@media (max-width: 470px) {
-  .training-chart {
-    flex-direction: column;
   }
 }

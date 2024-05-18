@@ -52,11 +52,14 @@ body {
     0px 2px 4px -2px rgba(24, 39, 75, 0.06);
 }
 
-.h1 {
+h1 {
   font-family: "Stolzl";
   font-size: 32px;
   font-weight: 400;
   line-height: 40px;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 h2 {
@@ -89,4 +92,20 @@ li {
   list-style: none;
   margin-bottom: 0;
   padding: 0;
+}
+
+.green {
+  background: $green;
+}
+
+.orange {
+  background: $orange;
+}
+
+.red {
+  background: $red;
+}
+
+.blue {
+  background: $blue;
 }
