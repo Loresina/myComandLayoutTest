@@ -1,4 +1,4 @@
-@media (max-width: 1140px) {
+@media (width <= 1140px) {
   body {
     height: auto;
   }
@@ -28,7 +28,7 @@
   }
 }
 
-@media (max-width: 470px) {
+@media (width <= 470px) {
   .tr-chart-container {
     flex-direction: column;
   }
