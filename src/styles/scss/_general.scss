@@ -80,6 +80,13 @@ h4 {
   margin: 0;
 }
 
+h5 {
+  font-family: Stolzl, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -106,4 +113,16 @@ li {
 
 .blue {
   background: $blue;
+}
+
+.one {
+  width: 100px;
+  height: 100px;
+  background: $orange;
+}
+
+.two {
+  width: 100px;
+  height: 100px;
+  background: $red;
 }

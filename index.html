@@ -5,125 +5,174 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My team</title>
 
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="/src/styles/normalize.min.css" />
     <link rel="stylesheet" href="/src/styles/styles.css" />
   </head>
 
   <body>
-    <main>
-      <h2>Моя команда</h2>
-      <div class="main-sections">
-        <section class="section training">
-          <div class="section-title">
-            <h4>Обученность команды</h4>
-            <span class="section-title__tooltip-info">
-              <span class="section-title__tooltip-text"
-                >Дополнительная информация</span
+    <main class="container">
+      <h2 class="mb-4">Моя команда</h2>
+      <div class="row d-flex gx-3">
+        <section class="col-lg-auto col-md-12">
+          <div class="card h-100 shadow card-rounded">
+            <div class="card-body">
+              <div class="d-flex justify-content-start align-items-center mb-4">
+                <h4>Обученность команды</h4>
+                <span class="section-title__tooltip-info">
+                  <span class="section-title__tooltip-text"
+                    >Дополнительная информация</span
+                  >
+                </span>
+              </div>
+
+              <div
+                class="row d-flex align-items-center justify-content-between gx-3"
               >
-            </span>
-          </div>
+                <div class="col-auto">
+                  <div
+                    class="tr-chart d-flex align-items-center justify-content-center"
+                  >
+                    <div class="tr-chart__center"></div>
+                    <h1>70%</h1>
+                  </div>
+                </div>
+                <div class="col-auto">
+                  <h5 class="tr-chart-legend__title mb-4.5">
+                    Курсы и траектории
+                  </h5>
 
-          <div class="tr-chart-container">
-            <div class="tr-chart">
-              <div class="tr-chart__center"></div>
-              <h1>70%</h1>
+                  <ul>
+                    <li
+                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div
+                        class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
+                      >
+                        <div class="tr-chart-legend__dot green"></div>
+                        <span class="tr-chart-legend__text">Завершено</span>
+                      </div>
+
+                      <div class="tr-chart-legend__statistic">
+                        <span>70%</span>
+                        <span>(7)</span>
+                      </div>
+                    </li>
+
+                    <li
+                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div
+                        class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
+                      >
+                        <div class="tr-chart-legend__dot orange"></div>
+                        <span class="tr-chart-legend__text">В процессе</span>
+                      </div>
+
+                      <div class="tr-chart-legend__statistic">
+                        <span>10%</span>
+                        <span>(1)</span>
+                      </div>
+                    </li>
+
+                    <li
+                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div
+                        class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
+                      >
+                        <div class="tr-chart-legend__dot red"></div>
+                        <span class="tr-chart-legend__text">Не пройдено</span>
+                      </div>
+
+                      <div class="tr-chart-legend__statistic">
+                        <span>10%</span>
+                        <span>(1)</span>
+                      </div>
+                    </li>
+
+                    <li
+                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                    >
+                      <div
+                        class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
+                      >
+                        <div class="tr-chart-legend__dot blue"></div>
+                        <span class="tr-chart-legend__text">Не начато</span>
+                      </div>
+
+                      <div class="tr-chart-legend__statistic">
+                        <span>10%</span>
+                        <span>(1)</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <div class="tr-chart-legend">
-              <span class="tr-chart-legend__title">Курсы и траектории</span>
+        <section class="col-lg-auto">
+          <div class="card h-100 shadow card-rounded">
+            <div class="card-body">
+              <div class="d-flex justify-content-start align-items-center mb-4">
+                <h4>Прогресс сотрудников</h4>
+                <span class="section-title__tooltip-info">
+                  <span class="section-title__tooltip-text"
+                    >Дополнительная информация</span
+                  >
+                </span>
+              </div>
 
-              <ul class="tr-chart-legend__list">
-                <li class="tr-chart-legend__item">
-                  <div class="tr-chart-legend__status">
-                    <div class="tr-chart-legend__dot green"></div>
-                    <span class="tr-chart-legend__text">Завершено</span>
-                  </div>
+              <div
+                class="pr-chart d-flex align-items-center justify-content-center"
+              >
+                <div class="pr-chart__center"></div>
+                <h1>2/5</h1>
+              </div>
 
-                  <div class="tr-chart-legend__statistic">
-                    <span>70%</span>
-                    <span>(7)</span>
-                  </div>
+              <span class="pr-chart-legend"
+                >сотрудников завершили обучение</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <section class="col-lg-auto">
+          <div class="card h-100 shadow card-rounded">
+            <div class="card-body">
+              <div class="section-title mb-4">
+                <h4>Oбратите внимание</h4>
+              </div>
+
+              <ul>
+                <li
+                  class="attention-info__li d-flex align-items-center gap-2 mb-2"
+                >
+                  <img src="/src/img/attention.svg" alt="attention icon" />
+                  <span>Не прошли обучение: 1</span>
                 </li>
-
-                <li class="tr-chart-legend__item">
-                  <div class="tr-chart-legend__status">
-                    <div class="tr-chart-legend__dot orange"></div>
-                    <span class="tr-chart-legend__text">В процессе</span>
-                  </div>
-
-                  <div class="tr-chart-legend__statistic">
-                    <span>10%</span>
-                    <span>(1)</span>
-                  </div>
+                <li
+                  class="attention-info__li d-flex align-items-center gap-2 mb-2"
+                >
+                  <img src="/src/img/attention.svg" alt="attention icon" />
+                  <span>Не заходили на портал: 1</span>
                 </li>
-
-                <li class="tr-chart-legend__item">
-                  <div class="tr-chart-legend__status">
-                    <div class="tr-chart-legend__dot red"></div>
-                    <span class="tr-chart-legend__text">Не пройдено</span>
-                  </div>
-
-                  <div class="tr-chart-legend__statistic">
-                    <span>10%</span>
-                    <span>(1)</span>
-                  </div>
-                </li>
-
-                <li class="tr-chart-legend__item">
-                  <div class="tr-chart-legend__status">
-                    <div class="tr-chart-legend__dot blue"></div>
-                    <span class="tr-chart-legend__text">Не начато</span>
-                  </div>
-
-                  <div class="tr-chart-legend__statistic">
-                    <span>10%</span>
-                    <span>(1)</span>
-                  </div>
+                <li class="attention-info__li d-flex align-items-center gap-2">
+                  <img src="/src/img/attention.svg" alt="attention icon" />
+                  <span>Не были более 2 недель: 1</span>
                 </li>
               </ul>
             </div>
           </div>
         </section>
-
-        <section class="section progress">
-          <div class="section-title">
-            <h4>Прогресс сотрудников</h4>
-            <span class="section-title__tooltip-info">
-              <span class="section-title__tooltip-text"
-                >Дополнительная информация</span
-              >
-            </span>
-          </div>
-
-          <div class="pr-chart">
-            <div class="pr-chart__center"></div>
-            <h1>2/5</h1>
-          </div>
-
-          <span class="pr-chart-legend">сотрудников завершили обучение</span>
-        </section>
-
-        <section class="section attention">
-          <div class="section-title">
-            <h4>Oбратите внимание</h4>
-          </div>
-
-          <ul class="attention-info">
-            <li class="attention-info__li">
-              <img src="/src/img/attention.svg" alt="attention icon" />
-              <span>Не прошли обучение: 1</span>
-            </li>
-            <li class="attention-info__li">
-              <img src="/src/img/attention.svg" alt="attention icon" />
-              <span>Не заходили на портал: 1</span>
-            </li>
-            <li class="attention-info__li">
-              <img src="/src/img/attention.svg" alt="attention icon" />
-              <span>Не были более 2 недель: 1</span>
-            </li>
-          </ul>
-        </section>
       </div>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

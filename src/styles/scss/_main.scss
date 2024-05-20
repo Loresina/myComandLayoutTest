@@ -1,35 +1,19 @@
-main {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  padding: 15px;
+.max-width {
+  max-width: 300px;
 }
 
-.main-sections {
-  display: flex;
-  gap: 20px;
+.container {
   max-width: 1090px;
+  margin: 0;
+  padding: 0;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  background: $white;
+.card-body {
   padding: 40px;
-  border-radius: 40px;
-  box-sizing: border-box;
-
-  @include shadow;
 }
 
-.section-title {
-  display: flex;
-  justify-content: flex-start;
-  gap: 8px;
-  align-items: center;
+.card-rounded {
+  border-radius: 40px;
 }
 
 .section-title__tooltip-info {
@@ -71,12 +55,6 @@ main {
   opacity: 1;
 }
 
-.tr-chart-container {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
 .tr-chart {
   position: relative;
   width: 160px;
@@ -88,9 +66,6 @@ main {
     $blue 90% 100%
   );
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   & h1 {
     z-index: 1;
@@ -106,44 +81,11 @@ main {
   border-radius: 50%;
 }
 
-.tr-chart-legend {
-  width: 183px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.tr-chart-legend__title {
-  font-family: Stolzl, sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-}
-
-.tr-chart-legend__list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
 .tr-chart-legend__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
   @include section-text;
 }
 
-.tr-chart-legend__status {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .tr-chart-legend__statistic {
-  display: flex;
-  gap: 4px;
-
   & span:last-child {
     opacity: 0.5;
   }
@@ -155,19 +97,11 @@ main {
   border-radius: 50%;
 }
 
-.progress {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  //   gap: 150px;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .pr-chart {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
   width: 200px;
   height: 200px;
   background: conic-gradient(
@@ -176,9 +110,7 @@ main {
     $light-grey 15% 100%
   );
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
   clip-path: polygon(0 0, 100% 0, 100% 51%, 0 50%);
 
   & h1 {
@@ -199,21 +131,17 @@ main {
 }
 
 .pr-chart-legend {
-  @include section-text;
-  width: 220px;
-}
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translate(-50%);
 
-.attention-info {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 12px;
+  @include section-text;
+  display: block;
+  width: 186px;
 }
 
 .attention-info__li {
-  display: flex;
-  align-items: center;
-  gap: 6px;
   padding: 4px 12px;
   border-radius: 8px;
   border: 1px solid $light-grey;
