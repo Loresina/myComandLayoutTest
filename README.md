@@ -10,6 +10,7 @@ Link to see it [My team](https://my-team-layout-test.vercel.app/)
 
 - HTML
 - Sass
+- Bootstrap - separate commit using Bootstrap
 
 ## Installation
 
