@@ -28,19 +28,17 @@ $red: #ec133d;
 $orange: #e9841d;
 $green: #00a75c;
 
-body {
-  height: 100vh;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+@mixin app-text {
   font-family: Verdana, sans-serif;
   font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
   color: $black;
-  background: $background;
 }
 
 @mixin section-text {
+  font-family: Verdana, sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -50,6 +48,17 @@ body {
 @mixin shadow {
   box-shadow: 0 4px 4px -2px rgb(24 39 75 / 4%),
     0 2px 4px -2px rgb(24 39 75 / 6%);
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background;
+
+  @include app-text;
 }
 
 h1 {

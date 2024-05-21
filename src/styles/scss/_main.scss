@@ -9,7 +9,7 @@ main {
 .main-sections {
   display: flex;
   gap: 20px;
-  max-width: 1090px;
+  max-width: $container;
 }
 
 .section {
@@ -99,7 +99,6 @@ main {
 
 .tr-chart__center {
   position: absolute;
-  text-align: center;
   width: 130px;
   height: 130px;
   background-color: $white;
@@ -159,8 +158,6 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-
-  //   gap: 150px;
   justify-content: space-between;
   align-items: center;
 }
@@ -200,14 +197,14 @@ main {
 
 .pr-chart-legend {
   @include section-text;
-  width: 220px;
+  width: 186px;
 }
 
 .attention-info {
   display: flex;
   flex-direction: column;
   align-items: start;
-  gap: 12px;
+  gap: 10px;
 }
 
 .attention-info__li {
