@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/src/styles/styles.css" />
   </head>
 
-  <body>
-    <main class="container">
+  <body class="d-flex justify-content-center align-items-center">
+    <main class="container p-0">
       <h2 class="text-center text-xl-start ms-xl-4 mb-4">Моя команда</h2>
       <div class="row d-flex gx-3 gy-3">
         <section class="col-lg-12 col-xl-auto">
@@ -39,7 +39,7 @@
                   <div
                     class="tr-chart d-flex align-items-center justify-content-center"
                   >
-                    <div class="tr-chart__center"></div>
+                    <div class="tr-chart__center position-absolute"></div>
                     <h1>70%</h1>
                   </div>
                 </div>
@@ -50,7 +50,7 @@
 
                   <ul>
                     <li
-                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                      class="section-text mb-2 d-flex align-items-center justify-content-between gap-3"
                     >
                       <div
                         class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
@@ -59,14 +59,14 @@
                         <span class="tr-chart-legend__text">Завершено</span>
                       </div>
 
-                      <div class="tr-chart-legend__statistic">
+                      <div class="opacity-half">
                         <span>70%</span>
                         <span>(7)</span>
                       </div>
                     </li>
 
                     <li
-                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                      class="section-text mb-2 d-flex align-items-center justify-content-between gap-3"
                     >
                       <div
                         class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
@@ -75,14 +75,14 @@
                         <span class="tr-chart-legend__text">В процессе</span>
                       </div>
 
-                      <div class="tr-chart-legend__statistic">
+                      <div class="opacity-half">
                         <span>10%</span>
                         <span>(1)</span>
                       </div>
                     </li>
 
                     <li
-                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                      class="section-text mb-2 d-flex align-items-center justify-content-between gap-3"
                     >
                       <div
                         class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
@@ -91,14 +91,14 @@
                         <span class="tr-chart-legend__text">Не пройдено</span>
                       </div>
 
-                      <div class="tr-chart-legend__statistic">
+                      <div class="opacity-half">
                         <span>10%</span>
                         <span>(1)</span>
                       </div>
                     </li>
 
                     <li
-                      class="tr-chart-legend__item mb-2 d-flex align-items-center justify-content-between gap-3"
+                      class="section-text mb-2 d-flex align-items-center justify-content-between gap-3"
                     >
                       <div
                         class="tr-chart-legend__status d-flex align-items-center justify-content-between gap-2"
@@ -107,7 +107,7 @@
                         <span class="tr-chart-legend__text">Не начато</span>
                       </div>
 
-                      <div class="tr-chart-legend__statistic">
+                      <div class="opacity-half">
                         <span>10%</span>
                         <span>(1)</span>
                       </div>
@@ -136,11 +136,13 @@
               <div
                 class="pr-chart d-flex align-items-center justify-content-center"
               >
-                <div class="pr-chart__center"></div>
+                <div
+                  class="pr-chart__center position-absolute text-center"
+                ></div>
                 <h1>2/5</h1>
               </div>
 
-              <span class="pr-chart-legend"
+              <span class="pr-chart-legend section-text"
                 >сотрудников завершили обучение</span
               >
             </div>
@@ -156,7 +158,9 @@
                 <h4>Oбратите внимание</h4>
               </div>
 
-              <ul>
+              <ul
+                class="d-flex flex-column align-items-center align-items-xl-start"
+              >
                 <li
                   class="attention-info__li d-flex align-items-center gap-2 mb-2"
                 >

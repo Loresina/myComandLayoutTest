@@ -1,11 +1,5 @@
-.max-width {
-  max-width: 300px;
-}
-
 .container {
-  max-width: 1090px;
-  margin: 0;
-  padding: 0;
+  max-width: $container;
 }
 
 .card-body {
@@ -73,22 +67,10 @@
 }
 
 .tr-chart__center {
-  position: absolute;
-  text-align: center;
   width: 130px;
   height: 130px;
   background-color: $white;
   border-radius: 50%;
-}
-
-.tr-chart-legend__item {
-  @include section-text;
-}
-
-.tr-chart-legend__statistic {
-  & span:last-child {
-    opacity: 0.5;
-  }
 }
 
 .tr-chart-legend__dot {
@@ -122,8 +104,6 @@
 }
 
 .pr-chart__center {
-  position: absolute;
-  text-align: center;
   width: 160px;
   height: 160px;
   background-color: $white;
@@ -135,8 +115,6 @@
   bottom: 40px;
   left: 50%;
   transform: translate(-50%);
-
-  @include section-text;
   display: block;
   width: 186px;
 }
